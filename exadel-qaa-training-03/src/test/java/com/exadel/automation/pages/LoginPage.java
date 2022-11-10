@@ -229,7 +229,7 @@ public class LoginPage extends BasePage {
 
     public LoginPage clickAdd2() {
         logger.info("Click \"Next\" button");
-        add2Button.click();
+        add2Button.submit();
         return this;
     }
     @Step("Submit Login")
