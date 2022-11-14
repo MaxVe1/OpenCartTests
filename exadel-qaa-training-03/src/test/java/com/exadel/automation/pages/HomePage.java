@@ -36,7 +36,7 @@ public class HomePage extends BasePage {
     }
 
     private CategoryListBox getCategoriesListBox() {
-        categoriesOpener.click();
+        //categoriesOpener.click();
     	return new CategoryListBox(categoriesListBoxHolder);
     }
 

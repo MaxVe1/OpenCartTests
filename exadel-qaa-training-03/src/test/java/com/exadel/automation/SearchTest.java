@@ -20,6 +20,9 @@ public class SearchTest extends BaseTest {
         LoginPage loginPage = new LoginPage(driver).
         navigateToCamera();
 
+        assertThat(loginPage.getCategoryNames())
+                .contains("Cameras (2)");
+
     }
 
     @Feature("OPENCART_2")
@@ -27,10 +30,18 @@ public class SearchTest extends BaseTest {
     @Severity(SeverityLevel.NORMAL)
     @Test(description = "Verify iPhone is correct")
     public void testCategoriesList2() {
-
-
-        LoginPage loginPage1 = new LoginPage(driver).
-                navigateToIphone();
+        LoginPage loginPage = new LoginPage(driver);
+        assertThat(loginPage.getCurrency())
+                .contains("$");
+                loginPage.navigateToIphone();
+        assertThat(loginPage.getIPhonePrice())
+                .contains("$123.20");
+                loginPage.navigateToEuro();
+        assertThat(loginPage.getIPhonePrice())
+                .contains("123.29€");
+                loginPage.navigateToPound();
+        assertThat(loginPage.getIPhonePrice())
+                .contains("£106.62");
 
     }
 
