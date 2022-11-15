@@ -9,40 +9,27 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.FindBys;
 import java.lang.*;
 import static com.exadel.automation.utils.ElementsUtil.waitForVisible;
-
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class LoginPage extends BasePage {
 
-    private static final String DEFAULT_SELECTOR = "#column-left > div.list-group.mb-3"; //Main MV Table Selector
-    //private static final String LOGIN_PAGE_LINK_SELECTOR = "div#nav-tools a#nav-link-accountList";
-
-    private static final String CURRENCY_SELECTOR = "#form-currency > div > a";// ;//ADD $$$
-
-    //MV Edition
-    //private static final String LOGIN_PAGE_LINK_SELECTOR1 = "#top > div.container > div.nav.float-end > ul > li:nth-child(2)";
+    private static final String DEFAULT_SELECTOR = "#column-left > div.list-group.mb-3";
+    private static final String CURRENCY_SELECTOR = "#form-currency > div > a";
     private static final String EMAIL_SELECTOR_MV = "#input-email";
 
     private static final String PSW_SELECTOR_MV = "#input-password";
     private static final String CONTINUE_BUTTON_SELECTOR = "input#continue";
 
     private static final String ITEM_SELECTOR = "#content > div.row.mb-3 > div:nth-child(2)";
-    private static final String PASSWORD_SELECTOR = "input#ap_password";
-    private static final String SIGNIN_BUTTON_SELECTOR = "input#signInSubmit"; 
+    private static final String CAM_SELECTOR = "#product-list > div:nth-child(1)";
+    private static final String CAM2_SELECTOR = "#product-list > div:nth-child(2)";
+    private static final String SIGNIN_BUTTON_SELECTOR = "input#signInSubmit";
     private static final String LOGIN_ERROR_SELECTOR = "div.a-alert-container div.a-alert-content";
     private static final String NEED_HELP_SELECTOR = "div.a-expander-container";
     private static final String NEED_HELP_LINK_SELECTOR = "a.a-expander-header";
-
-    //@FindBy(css = CATEGORIES_OPENER_LINK_SELECTOR)
-    //private WebElement categoriesOpener;
-   // private static final String HEADER_SELECTOR = "#headingText";
-
     private static final String ADD1_BUTTON_SELECTOR = "#product-list > div:nth-child(1) > form > div > div.content > div.button-group > button:nth-child(2)";
     private static final String ADD2_BUTTON_SELECTOR = "#product-list > div:nth-child(2) > form > div > div.content > div.button-group > button:nth-child(2) > i";
     private static final String CATEGORIES_CLOSER_LINK_SELECTOR = "div.nav-sprite.hmenu-close-icon";//MV NEW
-
-    //private static final String CATEGORIES_OPENER_LINK_SELECTOR = "div.nav-left a#nav-hamburger-menu";//MV NEW
     public LoginPage(WebDriver driver) {
         super(driver);
     }
@@ -62,9 +49,6 @@ public class LoginPage extends BasePage {
 
     @FindBy(css = CONTINUE_BUTTON_SELECTOR)
     private WebElement continueButton;
-
-    //@FindBy(css = PASSWORD_SELECTOR)
-    //private WebElement password;
 
     @FindBy(css = PSW_SELECTOR_MV)
     private WebElement password;
@@ -86,37 +70,13 @@ public class LoginPage extends BasePage {
     @FindBys({@FindBy(css = NEED_HELP_SELECTOR), @FindBy(css = NEED_HELP_LINK_SELECTOR)})
     private WebElement needHelpLink;    
     
-    //@FindBy(css = HEADER_SELECTOR)
-    //private WebElement header;
-
-   // @Step("Navigate to Login page")
-   // public LoginPage navigateToSelf() {
-   // @FindBy(css = CATEGORIES_OPENER_LINK_SELECTOR)
-  //  private WebElement categoriesOpener;
-
-
-
-        //List<WebElement> selfLink = driver.findElements(By.cssSelector(LOGIN_PAGE_LINK_SELECTOR));
-      //  if (selfLink.size() > 0) { selfLink.get(0).click(); }
-
-   //     return this;
-   // }
-
     @Step("Navigate to Camera")
     public LoginPage navigateToCamera() {
 
-        List<WebElement> selfLink = driver.findElements(By.cssSelector("#narbar-menu > ul > li:nth-child(7) > a"));//.click();//LOGIN_PAGE_LINK_SELECTOR1));
+        List<WebElement> selfLink = driver.findElements(By.cssSelector("#narbar-menu > ul > li:nth-child(7) > a"));
         if (selfLink.size() > 0) {
             selfLink.get(0).click();
         }
-
-
-        //selfLink.click();
-       // setTimeout(() -> System.out.println("test"), 7000);
-//        List<WebElement> selfLink2 = driver.findElements(By.cssSelector("#top > div.container > div.nav.float-end > ul > li:nth-child(2) > div > ul > li:nth-child(2) > a"));//.click();//LOGIN_PAGE_LINK_SELECTOR1));
-//        if (selfLink2.size() > 0) {
-//            selfLink2.get(0).click();
-//        }
         return this;
     }
 
@@ -126,9 +86,6 @@ public class LoginPage extends BasePage {
         if (selfLink1.size() > 0) {
             selfLink1.get(0).click();
         }
-        //selfLink.click();
-        // setTimeout(() -> System.out.println("test"), 7000);
-
         return this;
     }
     @Step("Navigate to Euro")
@@ -162,23 +119,14 @@ public class LoginPage extends BasePage {
         if (selfLink1.size() > 0) {
             selfLink1.get(0).click();
         }
-        //selfLink.click();
-        // setTimeout(() -> System.out.println("test"), 7000);
-
-        return this;
+            return this;
     }
-
-
-
     @Step("Navigate to Components")
     public LoginPage navigateToComponents() {
         List<WebElement> selfLink1 = driver.findElements(By.cssSelector("#narbar-menu > ul > li:nth-child(3) > a"));
         if (selfLink1.size() > 0) {
             selfLink1.get(0).click();
         }
-        //selfLink.click();
-        // setTimeout(() -> System.out.println("test"), 7000);
-
         return this;
     }
     @Step("Navigate to Components")
@@ -187,8 +135,6 @@ public class LoginPage extends BasePage {
         if (selfLink1.size() > 0) {
             selfLink1.get(0).click();
         }
-        //selfLink.click();
-        // setTimeout(() -> System.out.println("test"), 7000);
 
         return this;
     }
@@ -215,12 +161,9 @@ public class LoginPage extends BasePage {
         if (selfLink1.size() > 0) {
             selfLink1.get(0).click();
         }
-        //selfLink.click();
-        // setTimeout(() -> System.out.println("test"), 7000);
 
         return this;
     }
-    //
     @Step("Enter email")
     public LoginPage enterEmail(String emailAddress) {
         waitForVisible(driver, By.cssSelector(EMAIL_SELECTOR_MV));
@@ -240,14 +183,6 @@ public class LoginPage extends BasePage {
     @FindBy(css = CATEGORIES_CLOSER_LINK_SELECTOR)
     private WebElement categoriesCloser;
 
-
-//    @Step("Enter Password")
-//    public LoginPage enterPassword(String pass) {
-//        logger.info("Enter password: " + pass);
-//        password.sendKeys(pass);
-//        return this;
-//    }
-
     @Step("Click next button")
     public LoginPage clickContinueButton() {
         logger.info("Click \"Next\" button");
@@ -257,8 +192,6 @@ public class LoginPage extends BasePage {
     public LoginPage clickAdd1() {
         logger.info("Click \"Next\" button");
         add1Button.submit();
-
-        //add1Button.click();
         return this;
     }
 
@@ -284,28 +217,35 @@ public class LoginPage extends BasePage {
     private WebElement categoriesListBoxHolder;
     @FindBy(css = ITEM_SELECTOR)
     private WebElement ItemHolder;
+
+    @FindBy(css = CAM_SELECTOR)
+    private WebElement CamHolder;
+
+    @FindBy(css = CAM2_SELECTOR)
+    private WebElement CamHolder2;
     @FindBy(css = CURRENCY_SELECTOR)
     private WebElement CurrencyHolder;
     @Step("Get Categories List")
     public List<String> getCategoryNames() {
         List<String> names =  getCategoriesListBox().getCategoryNames();
-       // List<String> names =  getCategoryNames();
         logger.info("List categories: " + names);
-        //categoriesCloser.click();
         return names;
     }
     private CategoryListBox getCurrencyList() {
-        //categoriesOpener.click();
         return new CategoryListBox(CurrencyHolder);
     }
     private CategoryListBox getCategoriesListBox() {
-        //categoriesOpener.click();
         return new CategoryListBox(categoriesListBoxHolder);
     }
 
     private CategoryListBox getItem() {
-        //categoriesOpener.click();
         return new CategoryListBox(ItemHolder);
+    }
+    private CategoryListBox camItem1() {
+        return new CategoryListBox(CamHolder);
+    }
+    private CategoryListBox camItem2() {
+        return new CategoryListBox(CamHolder2);
     }
     @Step("Get Categories List")
     public List<String> getCurrency() {
@@ -316,12 +256,26 @@ public class LoginPage extends BasePage {
 
     @Step("Get iPhone Price")
     public List<String> getIPhonePrice() {
-        //List<String> names =  getCurrencyList().getCurrencyNames();
         List<String> price =  getItem().getIPhonePriceNames();
-        //logger.info("List categories: " + names);
         return price;
     }
-
+    @Step("Get Cam1 Price Old")
+    public List<String> getCam1priceOld() {
+        List<String> price =  camItem1().getCam1_PriceOld();
+        System.out.println(price);
+        return price;
+    }
+    @Step("Get Cam1 Price New")
+    public List<String> getCam1priceNew() {
+        List<String> price =  camItem1().getCam1_PriceNew();
+        System.out.println(price);
+        return price;
+    }
+    @Step("Get Cam2 Price with Tax")
+    public List<String> getCam2priceTax() {
+         List<String> price =  camItem2().getCam2_PriceTax();
+         return price;
+    }
     public WebElement getLoginError() { return loginError; }
     
     public WebElement getNeedHelpHolder() {return needHelp; }

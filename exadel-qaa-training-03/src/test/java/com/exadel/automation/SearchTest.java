@@ -10,26 +10,30 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class SearchTest extends BaseTest {
     //Ok
-
     @Feature("OPENCART_3")
     @Story("Check Cameras")
     @Severity(SeverityLevel.NORMAL)
     @Test(description = "Verify Cameras is correct")
-    public void testCategoriesList() {
+    public void testCamerasList() {
 
         LoginPage loginPage = new LoginPage(driver).
         navigateToCamera();
 
         assertThat(loginPage.getCategoryNames())
                 .contains("Cameras (2)");
-
+        assertThat(loginPage.getCam1priceOld())
+               .contains("$122.00");
+        assertThat(loginPage.getCam1priceNew())
+                .contains("$98.00");
+        assertThat(loginPage.getCam2priceTax())
+                 .contains("Ex Tax: $80.00");
     }
 
     @Feature("OPENCART_2")
     @Story("Check iPhone")
     @Severity(SeverityLevel.NORMAL)
     @Test(description = "Verify iPhone is correct")
-    public void testCategoriesList2() {
+    public void testIPhoneAndCurrencyList() {
         LoginPage loginPage = new LoginPage(driver);
         assertThat(loginPage.getCurrency())
                 .contains("$");
@@ -50,7 +54,7 @@ public class SearchTest extends BaseTest {
     @Story("Check Monitors")
     @Severity(SeverityLevel.NORMAL)
     @Test(description = "Verify Monitors is correct")
-    public void testCategoriesList3() {
+    public void testMonitorsList() {
 
         LoginPage loginPage1 = new LoginPage(driver).
                 navigateToAccount().
