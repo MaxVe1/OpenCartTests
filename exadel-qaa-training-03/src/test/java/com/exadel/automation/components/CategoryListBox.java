@@ -5,10 +5,12 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public class CategoryListBox extends BaseComponent {
     public static final String DEFAULT_SELECTOR = "a.list-group-item.active";
+    //public static WebDriver holder;
 
     //Added by MV
     private static String ACCMAIN_SELECTOR = "#top > div.container > div.nav.float-end > ul > li:nth-child(2)";
@@ -21,12 +23,22 @@ public class CategoryListBox extends BaseComponent {
     private static final String CAM1_PRICE_NEW = "#product-list > div:nth-child(1) > form > div > div.content > div.description > div > span.price-new";
     private static final String CAM2_PRICE_TAX = "#product-list > div:nth-child(2) > form > div > div.content > div.description > div > span.price-tax";
     private static String CURR_SELECTOR_MV = "#form-currency > div > a > strong";
+
+    private static String ALERT_MESSAGE_SELECTOR = "div.alert.alert-success.alert-dismissible";
     public CategoryListBox(WebElement holder) {
     	super(holder);
     }
-
+    public List<String> getAlertMessage(){
+        WebElement elementName= holder.findElement(By.cssSelector(ALERT_MESSAGE_SELECTOR));
+        //public boolean isOk(){
+        //boolean isOk =    holder.findElement(By.cssSelector(ALERT_MESSAGE_SELECTOR)).isDisplayed();
+        //}
+        System.out.println("ZZZZZZZZZzz"+ elementName);
+         return holder.findElements(By.cssSelector(ALERT_MESSAGE_SELECTOR))  //ITEMS_SELECTOR_MV
+                .stream().map(WebElement::getText).collect(Collectors.toList());
+    }
     public List<String> getCategoryNames(){
-    	return holder.findElements(By.cssSelector(ITEMS_SELECTOR_MV))
+    	return holder.findElements(By.cssSelector(ITEMS_SELECTOR_MV))  //ITEMS_SELECTOR_MV
     			.stream().map(WebElement::getText).collect(Collectors.toList());
     }
     public List<String> getCurrencyNames(){
@@ -56,5 +68,14 @@ public class CategoryListBox extends BaseComponent {
                 .click();                
                 }
             );
+    }
+
+    public void selectAlert(String...categoryNames) {
+        Arrays.asList(categoryNames).stream()
+                .forEachOrdered(name -> {
+                            holder.findElement(By.cssSelector(String.format(ALERT_MESSAGE_SELECTOR , name)));
+                                    //.click();
+                        }
+                );
     }
 }

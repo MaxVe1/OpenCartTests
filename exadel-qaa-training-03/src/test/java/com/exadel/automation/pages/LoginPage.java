@@ -65,11 +65,11 @@ public class LoginPage extends BasePage {
     private WebElement loginError;
 
     @FindBy(css = NEED_HELP_SELECTOR)
-    private WebElement needHelp;     
-    
+    private WebElement needHelp;
+
     @FindBys({@FindBy(css = NEED_HELP_SELECTOR), @FindBy(css = NEED_HELP_LINK_SELECTOR)})
-    private WebElement needHelpLink;    
-    
+    private WebElement needHelpLink;
+
     @Step("Navigate to Camera")
     public LoginPage navigateToCamera() {
 
@@ -100,7 +100,27 @@ public class LoginPage extends BasePage {
         }
         return this;
     }
+    @Step("Navigate to Euro")
+    public LoginPage navigateToCurrency(String item) {
+        List<WebElement> currLink = driver.findElements(By.cssSelector("#form-currency > div > a"));
+        if (currLink.size() > 0) {
+            currLink.get(0).click();
+        }
+        List<WebElement> selfLink1 = driver.findElements(By.xpath(item));//"//a[contains(@href, 'EUR')]"
+        if(selfLink1.size()==1){
+            selfLink1.get(0).click();
+        }
+        return this;
+    }
 
+    @Step("Navigate to Euro")
+    public LoginPage navigateToItem(String item) {
+        List<WebElement> currLink = driver.findElements(By.cssSelector(item));
+        if (currLink.size() > 0) {
+            currLink.get(0).click();
+        }
+        return this;
+    }
     @Step("Navigate to Pound")
     public LoginPage navigateToPound() {
         List<WebElement> currLink = driver.findElements(By.cssSelector("#form-currency > div > a"));
@@ -119,7 +139,7 @@ public class LoginPage extends BasePage {
         if (selfLink1.size() > 0) {
             selfLink1.get(0).click();
         }
-            return this;
+        return this;
     }
     @Step("Navigate to Components")
     public LoginPage navigateToComponents() {
@@ -273,13 +293,13 @@ public class LoginPage extends BasePage {
     }
     @Step("Get Cam2 Price with Tax")
     public List<String> getCam2priceTax() {
-         List<String> price =  camItem2().getCam2_PriceTax();
-         return price;
+        List<String> price =  camItem2().getCam2_PriceTax();
+        return price;
     }
     public WebElement getLoginError() { return loginError; }
-    
+
     public WebElement getNeedHelpHolder() {return needHelp; }
-    
+
     //public WebElement getHeader() { return header; }
 
 }

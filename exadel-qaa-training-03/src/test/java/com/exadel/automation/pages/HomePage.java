@@ -52,8 +52,6 @@ public class HomePage extends BasePage {
 //        return this;
 //    }
 
-
-
     @Step("Get Categories List")
     public List<String> getCategoryNames() {
     	List<String> names =  getCategoriesListBox().getCategoryNames();
