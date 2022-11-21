@@ -26,7 +26,6 @@ public class SearchTest extends BaseTest {
     public void testCamerasList() {
 
         LoginPage loginPage = new LoginPage(driver).
-                //navigateToCamera();
         navigateToItem(CAMERA);
 
         assertThat(loginPage.getCategoryNames())
@@ -37,48 +36,6 @@ public class SearchTest extends BaseTest {
                 .contains("$98.00");
         assertThat(loginPage.getCam2priceTax())
                 .contains("Ex Tax: $80.00");
-    }
-
-    @Feature("OPENCART_2")
-    @Story("Check iPhone")
-    @Severity(SeverityLevel.NORMAL)
-    @Test(description = "Verify iPhone is correct")
-    public void testIPhoneAndCurrencyList() {
-        LoginPage loginPage = new LoginPage(driver);
-        assertThat(loginPage.getCurrency())
-                .contains("$");
-        loginPage.navigateToIphone();
-        assertThat(loginPage.getIPhonePrice())
-                .contains("$123.20");
-        loginPage.navigateToEuro();
-        assertThat(loginPage.getIPhonePrice())
-                .contains("123.29€");
-        loginPage.navigateToPound();
-        assertThat(loginPage.getIPhonePrice())
-                .contains("£106.62");
-
-    }
-
-
-    @Feature("OPENCART_1")
-    @Story("Check Monitors")
-    @Severity(SeverityLevel.NORMAL)
-    @Test(description = "Verify Monitors is correct")
-    public void testMonitorsList() {
-
-        LoginPage loginPage = new LoginPage(driver).
-                //navigateToAccount().
-                //navigateToLogin().
-                navigateToItem(ACCOUNT).
-                navigateToItem(LOGIN).
-                enterEmail(propertiesLoader.getUserEmail())
-                .enterPSW(propertiesLoader.getUserPassword()).
-                navigateToItem(COMPONENTS).
-                //.navigateToComponents()
-                navigateToItem(MONITOR)
-                //.navigateToMonitor()
-                .clickAdd1()
-                .clickAdd2();
     }
 
 
@@ -94,12 +51,30 @@ public class SearchTest extends BaseTest {
         loginPage.navigateToItem(IPHONE);
         assertThat(loginPage.getIPhonePrice())
                 .contains("$123.20");
-        loginPage.navigateToCurrency(EURO);//"//a[contains(@href, 'EUR')]");
+        loginPage.navigateToCurrency(EURO);
         assertThat(loginPage.getIPhonePrice())
                 .contains("123.29€");
-        loginPage.navigateToCurrency(POUND);//"//a[contains(@href, 'GBP')]");
+        loginPage.navigateToCurrency(POUND);
         assertThat(loginPage.getIPhonePrice())
                 .contains("£106.62");
 
+    }
+
+
+    @Feature("OPENCART_1")
+    @Story("Check Monitors")
+    @Severity(SeverityLevel.NORMAL)
+    @Test(description = "Verify Monitors is correct")
+    public void testMonitorsList() {
+
+        LoginPage loginPage = new LoginPage(driver).
+                navigateToItem(ACCOUNT).
+                navigateToItem(LOGIN).
+                enterEmail(propertiesLoader.getUserEmail())
+                .enterPSW(propertiesLoader.getUserPassword()).
+                navigateToItem(COMPONENTS).
+                navigateToItem(MONITOR)
+                .clickAdd1()
+                .clickAdd2();
     }
 }
