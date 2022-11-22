@@ -261,8 +261,8 @@ public class LoginPage extends BasePage {
     private CategoryListBox getItem() {
         return new CategoryListBox(ItemHolder);
     }
-    private CategoryListBox camItem1() {
-        return new CategoryListBox(CamHolder);
+    private CategoryListBox camItem1( /*WebElement item1*/) {
+        return new CategoryListBox(CamHolder /*item1*/);//;);//"#product-list > div:nth-child(1)"; //CamHolder
     }
     private CategoryListBox camItem2() {
         return new CategoryListBox(CamHolder2);
@@ -275,31 +275,23 @@ public class LoginPage extends BasePage {
     }
 
     @Step("Get iPhone Price")
-    public List<String> getIPhonePrice() {
-        List<String> price =  getItem().getIPhonePriceNames();
+    public List<String> getValueIPhonePrice(String item) {
+        List<String> price =  getItem().getIPhonePriceNames(item);//"#content > div.row.mb-3 > div:nth-child(2) > ul:nth-child(3) > li:nth-child(1) > h2 > span");
         return price;
     }
     @Step("Get Cam1 Price Old")
-    public List<String> getCam1priceOld() {
-        List<String> price =  camItem1().getCam1_PriceOld();
-        System.out.println(price);
+    public List<String> getCam1price(/*WebElement parentItem,*/String item) {
+        List<String> price =  camItem1(/*parentItem*/).getCam1_Price(item);
         return price;
     }
-    @Step("Get Cam1 Price New")
-    public List<String> getCam1priceNew() {
-        List<String> price =  camItem1().getCam1_PriceNew();
-        System.out.println(price);
-        return price;
-    }
+
     @Step("Get Cam2 Price with Tax")
-    public List<String> getCam2priceTax() {
-        List<String> price =  camItem2().getCam2_PriceTax();
+    public List<String> getCam2price(String item) {
+        List<String> price =  camItem2().getCam2_PriceTax(item);
         return price;
     }
     public WebElement getLoginError() { return loginError; }
 
     public WebElement getNeedHelpHolder() {return needHelp; }
-
-    //public WebElement getHeader() { return header; }
 
 }

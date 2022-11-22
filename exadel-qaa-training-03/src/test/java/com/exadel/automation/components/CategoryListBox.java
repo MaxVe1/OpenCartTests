@@ -45,19 +45,19 @@ public class CategoryListBox extends BaseComponent {
         return holder.findElements(By.cssSelector(CURR_SELECTOR_MV))
                 .stream().map(WebElement::getText).collect(Collectors.toList());
     }
-    public List<String> getIPhonePriceNames(){return holder.findElements(By.cssSelector("#content > div.row.mb-3 > div:nth-child(2) > ul:nth-child(3) > li:nth-child(1) > h2 > span"))
+    public List<String> getIPhonePriceNames(String item){return holder.findElements(By.cssSelector(item))//"#content > div.row.mb-3 > div:nth-child(2) > ul:nth-child(3) > li:nth-child(1) > h2 > span"))
                .stream().map(WebElement::getText).collect(Collectors.toList());
     }
 
-    public List<String> getCam1_PriceOld(){
-             return holder.findElements(By.cssSelector(CAM1_PRICE_OLD))
+    public List<String> getCam1_Price(String item){
+             return holder.findElements(By.cssSelector(item))//CAM1_PRICE_OLD))
             .stream().map(WebElement::getText).collect(Collectors.toList());
     }
     public List<String> getCam1_PriceNew(){
         return holder.findElements(By.cssSelector(CAM1_PRICE_NEW))
                 .stream().map(WebElement::getText).collect(Collectors.toList());
     }
-    public List<String> getCam2_PriceTax(){
+    public List<String> getCam2_PriceTax(String item){
         return holder.findElements(By.cssSelector(CAM2_PRICE_TAX))
                 .stream().map(WebElement::getText).collect(Collectors.toList());
     }

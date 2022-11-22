@@ -12,7 +12,7 @@ import java.util.List;
 
 public class BaseComponent implements WebElement {
 
-	public static WebElement holder;
+	public WebElement holder;
     
 	public BaseComponent(WebElement element) {
     	this.holder = element;
