@@ -5,17 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c1b0dc83-6787-41a9-ba96-fdccce30bd5c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/exadel/automation/CameraTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/exadel/automation/IphoneCurrencyTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/exadel/automation/MonitorTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/exadel/automation/LoginTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/exadel/automation/SearchTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/exadel/automation/Test1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/exadel/automation/Test2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/exadel/automation/otherFiles/BaseShorts.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/exadel/automation/otherFiles/SearchShorts.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/exadel/automation/test_selenium_1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/exadel/automation/CameraTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/exadel/automation/CameraTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/exadel/automation/IphoneCurrencyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/exadel/automation/IphoneCurrencyTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/exadel/automation/MonitorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/exadel/automation/MonitorTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,8 +148,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.MonitorTest" />
-        <item itemvalue="TestNG.CameraTest" />
         <item itemvalue="TestNG.IphoneCurrencyTest" />
+        <item itemvalue="TestNG.CameraTest" />
         <item itemvalue="TestNG.CameraTest.testCamerasList" />
         <item itemvalue="TestNG.MonitorTest.testMonitorsList" />
       </list>
