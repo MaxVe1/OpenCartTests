@@ -5,18 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c1b0dc83-6787-41a9-ba96-fdccce30bd5c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/exadel/automation/SearchTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/exadel/automation/SearchTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/exadel/automation/components/BaseComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/exadel/automation/components/BaseComponent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/exadel/automation/components/CategoryListBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/exadel/automation/components/CategoryListBox.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/exadel/automation/otherFiles/SearchShorts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/exadel/automation/otherFiles/SearchShorts.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/exadel/automation/pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/exadel/automation/pages/LoginPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/allure-results/environment.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/allure-results/environment.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/exadel/automation/SearchTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/exadel/automation/SearchTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/exadel/automation/components/BaseComponent.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/exadel/automation/components/BaseComponent.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/exadel/automation/components/CategoryListBox.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/exadel/automation/components/CategoryListBox.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/exadel/automation/components/NewUserPopup.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/exadel/automation/components/NewUserPopup.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/exadel/automation/pages/LoginPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/exadel/automation/pages/LoginPage.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/exadel/automation/CameraTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/exadel/automation/IphoneCurrencyTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/exadel/automation/MonitorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/exadel/automation/LoginTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/exadel/automation/SearchTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/exadel/automation/Test1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/exadel/automation/Test2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/exadel/automation/otherFiles/BaseShorts.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/exadel/automation/otherFiles/SearchShorts.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/exadel/automation/test_selenium_1" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +51,7 @@
     &quot;last_opened_file_path&quot;: &quot;D:/EXADEL/NEW1/qaa3/exadel-qaa-training-03&quot;
   }
 }</component>
-  <component name="RunManager" selected="TestNG.SearchTest.testCamerasList">
+  <component name="RunManager" selected="TestNG.MonitorTest">
     <configuration name="HelloSelenium" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="dev.selenium.hello.HelloSelenium" />
       <module name="exadel-qaa-training-03" />
@@ -66,7 +65,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SearchShorts.testCamerasList" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="CameraTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="exadel-qaa-training-03" />
       <extension name="coverage">
         <pattern>
@@ -75,25 +74,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.exadel.automation" />
-      <option name="MAIN_CLASS_NAME" value="com.exadel.automation.SearchShorts" />
-      <option name="METHOD_NAME" value="testCamerasList" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SearchTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="exadel-qaa-training-03" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.exadel.automation.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.exadel.automation" />
-      <option name="MAIN_CLASS_NAME" value="com.exadel.automation.SearchTest" />
+      <option name="MAIN_CLASS_NAME" value="com.exadel.automation.CameraTest" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -101,7 +82,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SearchTest.testCamerasList" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="CameraTest.testCamerasList" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="exadel-qaa-training-03" />
       <extension name="coverage">
         <pattern>
@@ -110,7 +91,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.exadel.automation" />
-      <option name="MAIN_CLASS_NAME" value="com.exadel.automation.SearchTest" />
+      <option name="MAIN_CLASS_NAME" value="com.exadel.automation.CameraTest" />
       <option name="METHOD_NAME" value="testCamerasList" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
@@ -119,7 +100,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SearchTest.testIPhoneAndCurrencyUpd" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="IphoneCurrencyTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="exadel-qaa-training-03" />
       <extension name="coverage">
         <pattern>
@@ -128,16 +109,15 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.exadel.automation" />
-      <option name="MAIN_CLASS_NAME" value="com.exadel.automation.SearchTest" />
-      <option name="METHOD_NAME" value="testIPhoneAndCurrencyUpd" />
-      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="MAIN_CLASS_NAME" value="com.exadel.automation.IphoneCurrencyTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SearchTest.testMonitorsList" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="MonitorTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="exadel-qaa-training-03" />
       <extension name="coverage">
         <pattern>
@@ -146,7 +126,24 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.exadel.automation" />
-      <option name="MAIN_CLASS_NAME" value="com.exadel.automation.SearchTest" />
+      <option name="MAIN_CLASS_NAME" value="com.exadel.automation.MonitorTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MonitorTest.testMonitorsList" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="exadel-qaa-training-03" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.exadel.automation.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.exadel.automation" />
+      <option name="MAIN_CLASS_NAME" value="com.exadel.automation.MonitorTest" />
       <option name="METHOD_NAME" value="testMonitorsList" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
@@ -157,11 +154,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.SearchTest.testCamerasList" />
-        <item itemvalue="TestNG.SearchTest" />
-        <item itemvalue="TestNG.SearchTest.testIPhoneAndCurrencyUpd" />
-        <item itemvalue="TestNG.SearchShorts.testCamerasList" />
-        <item itemvalue="TestNG.SearchTest.testMonitorsList" />
+        <item itemvalue="TestNG.MonitorTest" />
+        <item itemvalue="TestNG.CameraTest" />
+        <item itemvalue="TestNG.IphoneCurrencyTest" />
+        <item itemvalue="TestNG.CameraTest.testCamerasList" />
+        <item itemvalue="TestNG.MonitorTest.testMonitorsList" />
       </list>
     </recent_temporary>
   </component>
@@ -179,11 +176,6 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/com/exadel/automation/LoginTest.java</url>
-          <line>64</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/com/exadel/automation/components/CategoryListBox.java</url>
           <line>40</line>
